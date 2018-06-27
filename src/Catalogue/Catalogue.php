@@ -4,8 +4,8 @@ namespace Railken\LaraOre\Catalogue;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Railken\Laravel\Manager\Contracts\EntityContract;
 use Illuminate\Support\Facades\Config;
+use Railken\Laravel\Manager\Contracts\EntityContract;
 
 class Catalogue extends Model implements EntityContract
 {
@@ -24,7 +24,7 @@ class Catalogue extends Model implements EntityContract
      * @var array
      */
     protected $fillable = [
-        'name'
+        'name',
     ];
 
     /**
@@ -33,7 +33,7 @@ class Catalogue extends Model implements EntityContract
      * @var array
      */
     protected $dates = [
-        'deleted_at'
+        'deleted_at',
     ];
 
     /**

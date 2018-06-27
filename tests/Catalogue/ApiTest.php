@@ -3,8 +3,8 @@
 namespace Railken\LaraOre\Tests\Catalogue;
 
 use Illuminate\Support\Facades\Config;
-use Railken\LaraOre\Support\Testing\ApiTestableTrait;
 use Railken\LaraOre\Catalogue\CatalogueFaker;
+use Railken\LaraOre\Support\Testing\ApiTestableTrait;
 
 class ApiTest extends BaseTest
 {

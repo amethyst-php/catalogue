@@ -2,9 +2,9 @@
 
 namespace Railken\LaraOre\Http\Controllers\Admin;
 
+use Illuminate\Support\Facades\Config;
 use Railken\LaraOre\Api\Http\Controllers\RestConfigurableController;
 use Railken\LaraOre\Api\Http\Controllers\Traits as RestTraits;
-use Illuminate\Support\Facades\Config;
 
 class CataloguesController extends RestConfigurableController
 {
@@ -15,7 +15,7 @@ class CataloguesController extends RestConfigurableController
     use RestTraits\RestRemoveTrait;
 
     /**
-     * The config path
+     * The config path.
      *
      * @var string
      */

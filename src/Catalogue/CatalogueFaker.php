@@ -2,8 +2,8 @@
 
 namespace Railken\LaraOre\Catalogue;
 
-use Railken\Bag;
 use Faker\Factory;
+use Railken\Bag;
 
 class CatalogueFaker
 {
@@ -13,7 +13,7 @@ class CatalogueFaker
     public static function make()
     {
         $faker = Factory::create();
-        
+
         $bag = new Bag();
         $bag->set('name', $faker->name);
 

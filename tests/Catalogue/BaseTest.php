@@ -2,8 +2,6 @@
 
 namespace Railken\LaraOre\Tests\Catalogue;
 
-use Railken\Bag;
-
 abstract class BaseTest extends \Orchestra\Testbench\TestCase
 {
     protected function getPackageProviders($app)

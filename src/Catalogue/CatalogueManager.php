@@ -2,10 +2,10 @@
 
 namespace Railken\LaraOre\Catalogue;
 
+use Illuminate\Support\Facades\Config;
 use Railken\Laravel\Manager\Contracts\AgentContract;
 use Railken\Laravel\Manager\ModelManager;
 use Railken\Laravel\Manager\Tokens;
-use Illuminate\Support\Facades\Config;
 
 class CatalogueManager extends ModelManager
 {
@@ -15,7 +15,7 @@ class CatalogueManager extends ModelManager
      * @var string
      */
     public $entity;
-    
+
     /**
      * List of all attributes.
      *
@@ -26,7 +26,7 @@ class CatalogueManager extends ModelManager
         Attributes\Name\NameAttribute::class,
         Attributes\CreatedAt\CreatedAtAttribute::class,
         Attributes\UpdatedAt\UpdatedAtAttribute::class,
-        Attributes\DeletedAt\DeletedAtAttribute::class
+        Attributes\DeletedAt\DeletedAtAttribute::class,
     ];
 
     /**
@@ -47,7 +47,7 @@ class CatalogueManager extends ModelManager
     {
         $this->entity = Config::get('ore.catalogue.entity');
         $this->attributes = array_merge($this->attributes, array_values(Config::get('ore.catalogue.attributes')));
-        
+
         $classRepository = Config::get('ore.catalogue.repository');
         $this->setRepository(new $classRepository($this));
 

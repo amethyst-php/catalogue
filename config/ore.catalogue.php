@@ -107,7 +107,7 @@ return [
         |
         */
         'controller' => Railken\LaraOre\Http\Controllers\Admin\CataloguesController::class,
-        
+
         /*
         |--------------------------------------------------------------------------
         | Router Options
@@ -119,5 +119,5 @@ return [
         'router' => [
             'prefix' => '/admin/catalogues',
         ],
-    ]
+    ],
 ];
