@@ -29,6 +29,7 @@ class CataloguesController extends RestConfigurableController
     public $queryable = [
         'id',
         'name',
+        'description',
         'created_at',
         'updated_at',
     ];
@@ -40,5 +41,6 @@ class CataloguesController extends RestConfigurableController
      */
     public $fillable = [
         'name',
+        'description',
     ];
 }

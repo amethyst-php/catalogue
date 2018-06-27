@@ -16,6 +16,7 @@ class CatalogueFaker
 
         $bag = new Bag();
         $bag->set('name', $faker->name);
+        $bag->set('description', $faker->realText);
 
         return $bag;
     }

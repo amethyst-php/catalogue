@@ -24,7 +24,7 @@ class Catalogue extends Model implements EntityContract
      * @var array
      */
     protected $fillable = [
-        'name',
+        'name', 'description'
     ];
 
     /**

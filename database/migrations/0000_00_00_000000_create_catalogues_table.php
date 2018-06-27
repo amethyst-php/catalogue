@@ -17,6 +17,7 @@ class CreateCataloguesTable extends Migration
         Schema::create(Config::get('ore.catalogue.table'), function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
+            $table->text('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
