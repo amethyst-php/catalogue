@@ -18,6 +18,7 @@ class CatalogueFaker
         $bag->set('name', $faker->name);
         $bag->set('description', $faker->realText);
         $bag->set('enabled', 1);
+        $bag->set('notes', $faker->realText);
 
         return $bag;
     }

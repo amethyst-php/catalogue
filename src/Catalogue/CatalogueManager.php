@@ -28,7 +28,8 @@ class CatalogueManager extends ModelManager
         Attributes\UpdatedAt\UpdatedAtAttribute::class,
         Attributes\DeletedAt\DeletedAtAttribute::class,
         Attributes\Description\DescriptionAttribute::class,
-        Attributes\Enabled\EnabledAttribute::class
+        Attributes\Enabled\EnabledAttribute::class,
+        Attributes\Notes\NotesAttribute::class
     ];
 
     /**

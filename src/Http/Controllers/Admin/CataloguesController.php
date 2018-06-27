@@ -31,6 +31,7 @@ class CataloguesController extends RestConfigurableController
         'name',
         'description',
         'enabled',
+        'notes',
         'created_at',
         'updated_at',
     ];
@@ -44,5 +45,6 @@ class CataloguesController extends RestConfigurableController
         'name',
         'description',
         'enabled',
+        'notes',
     ];
 }
