@@ -45,7 +45,7 @@ class Catalogue extends Model implements EntityContract
      * @var array
      */
     protected $casts = [
-        'enabled' => 'boolean',
+        'enabled' => 'integer',
     ];
     
     /**
