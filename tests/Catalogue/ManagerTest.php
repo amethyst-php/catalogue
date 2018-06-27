@@ -2,9 +2,9 @@
 
 namespace Railken\LaraOre\Tests\Catalogue;
 
-use Railken\LaraOre\Support\Testing\ManagerTestableTrait;
-use Railken\LaraOre\Catalogue\CatalogueManager;
 use Railken\LaraOre\Catalogue\CatalogueFaker;
+use Railken\LaraOre\Catalogue\CatalogueManager;
+use Railken\LaraOre\Support\Testing\ManagerTestableTrait;
 
 class ManagerTest extends BaseTest
 {

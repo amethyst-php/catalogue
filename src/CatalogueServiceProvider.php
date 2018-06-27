@@ -46,12 +46,12 @@ class CatalogueServiceProvider extends ServiceProvider
     {
         Router::group(Config::get('ore.catalogue.http.router'), function ($router) {
             $controller = Config::get('ore.catalogue.http.controller');
-            
-            $router->get('/', ['uses' => $controller . '@index']);
-            $router->post('/', ['uses' => $controller . '@create']);
-            $router->put('/{id}', ['uses' => $controller . '@update']);
-            $router->delete('/{id}', ['uses' => $controller . '@remove']);
-            $router->get('/{id}', ['uses' => $controller . '@show']);
+
+            $router->get('/', ['uses' => $controller.'@index']);
+            $router->post('/', ['uses' => $controller.'@create']);
+            $router->put('/{id}', ['uses' => $controller.'@update']);
+            $router->delete('/{id}', ['uses' => $controller.'@remove']);
+            $router->get('/{id}', ['uses' => $controller.'@show']);
         });
     }
 }
