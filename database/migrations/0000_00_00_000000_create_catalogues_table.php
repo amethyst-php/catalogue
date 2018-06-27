@@ -18,6 +18,7 @@ class CreateCataloguesTable extends Migration
             $table->increments('id');
             $table->string('name')->unique();
             $table->text('description')->nullable();
+            $table->boolean('enabled');
             $table->timestamps();
             $table->softDeletes();
         });

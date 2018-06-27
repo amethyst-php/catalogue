@@ -24,7 +24,9 @@ class Catalogue extends Model implements EntityContract
      * @var array
      */
     protected $fillable = [
-        'name', 'description'
+        'name',
+        'description',
+        'enabled'
     ];
 
     /**
@@ -36,6 +38,15 @@ class Catalogue extends Model implements EntityContract
         'deleted_at',
     ];
 
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'enabled' => 'boolean',
+    ];
+    
     /**
      * Creates a new instance of the model.
      *

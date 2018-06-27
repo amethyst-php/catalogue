@@ -30,6 +30,7 @@ class CataloguesController extends RestConfigurableController
         'id',
         'name',
         'description',
+        'enabled',
         'created_at',
         'updated_at',
     ];
@@ -42,5 +43,6 @@ class CataloguesController extends RestConfigurableController
     public $fillable = [
         'name',
         'description',
+        'enabled',
     ];
 }
