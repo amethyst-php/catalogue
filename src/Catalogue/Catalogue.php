@@ -27,7 +27,8 @@ class Catalogue extends Model implements EntityContract
         'name',
         'description',
         'enabled',
-        'notes'
+        'notes',
+        'parent_id'
     ];
 
     /**
@@ -58,5 +59,13 @@ class Catalogue extends Model implements EntityContract
         parent::__construct($attributes);
         $this->table = Config::get('ore.catalogue.table');
         $this->fillable = array_merge($this->fillable, array_keys(Config::get('ore.catalogue.attributes')));
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function parent()
+    {
+        return $this->belongsTo(Catalogue::class);
     }
 }

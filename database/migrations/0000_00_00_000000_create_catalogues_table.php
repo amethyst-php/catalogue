@@ -20,6 +20,8 @@ class CreateCataloguesTable extends Migration
             $table->text('description')->nullable();
             $table->boolean('enabled')->default(1);
             $table->text('notes')->nullable();
+            $table->integer('parent_id')->unsigned()->nullable();
+            $table->foreign('parent_id')->references('id')->on(Config::get('ore.catalogue.table'));
             $table->timestamps();
             $table->softDeletes();
         });
