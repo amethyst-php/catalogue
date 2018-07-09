@@ -28,7 +28,7 @@ class Catalogue extends Model implements EntityContract
         'description',
         'enabled',
         'notes',
-        'parent_id'
+        'parent_id',
     ];
 
     /**
@@ -48,7 +48,7 @@ class Catalogue extends Model implements EntityContract
     protected $casts = [
         'enabled' => 'integer',
     ];
-    
+
     /**
      * Creates a new instance of the model.
      *

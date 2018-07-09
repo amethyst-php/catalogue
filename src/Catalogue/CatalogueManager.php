@@ -30,7 +30,7 @@ class CatalogueManager extends ModelManager
         Attributes\Description\DescriptionAttribute::class,
         Attributes\Enabled\EnabledAttribute::class,
         Attributes\Notes\NotesAttribute::class,
-        Attributes\ParentId\ParentIdAttribute::class
+        Attributes\ParentId\ParentIdAttribute::class,
     ];
 
     /**

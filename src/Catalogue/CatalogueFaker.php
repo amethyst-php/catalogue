@@ -26,11 +26,12 @@ class CatalogueFaker extends BaseFaker
         $bag->set('enabled', 1);
         $bag->set('notes', $faker->text);
         $bag->set('parent', [
-            'name' => $faker->name,
+            'name'        => $faker->name,
             'description' => $faker->text,
-            'enabled' => 1,
-            'notes' => $faker->text
+            'enabled'     => 1,
+            'notes'       => $faker->text,
         ]);
+
         return $bag;
     }
 }

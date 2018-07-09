@@ -48,6 +48,6 @@ class CataloguesController extends RestConfigurableController
         'enabled',
         'notes',
         'parent_id',
-        'parent'
+        'parent',
     ];
 }

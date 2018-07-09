@@ -5,7 +5,6 @@ namespace Railken\LaraOre\Catalogue\Attributes\Enabled;
 use Railken\Laravel\Manager\Attributes\BaseAttribute;
 use Railken\Laravel\Manager\Contracts\EntityContract;
 use Railken\Laravel\Manager\Tokens;
-use Respect\Validation\Validator as v;
 
 class EnabledAttribute extends BaseAttribute
 {
@@ -61,6 +60,6 @@ class EnabledAttribute extends BaseAttribute
      */
     public function valid(EntityContract $entity, $value)
     {
-        return $value === 1 || $value === 0 || $value === true || $value === false;
+        return 1 === $value || 0 === $value || true === $value || false === $value;
     }
 }
