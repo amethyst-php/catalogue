@@ -2,6 +2,7 @@
 
 namespace Railken\LaraOre;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 use Railken\LaraOre\Api\Support\Router;
@@ -38,14 +39,18 @@ class CatalogueServiceProvider extends ServiceProvider
      */
     public function loadRoutes()
     {
-        Router::group(Config::get('ore.catalogue.http.router'), function ($router) {
-            $controller = Config::get('ore.catalogue.http.controller');
+        $config = Config::get('ore.catalogue.http.admin');
 
-            $router->get('/', ['uses' => $controller.'@index']);
-            $router->post('/', ['uses' => $controller.'@create']);
-            $router->put('/{id}', ['uses' => $controller.'@update']);
-            $router->delete('/{id}', ['uses' => $controller.'@remove']);
-            $router->get('/{id}', ['uses' => $controller.'@show']);
-        });
+        if (Arr::get($config, 'enabled')) {
+            Router::group('admin', Arr::get($config, 'router'), function ($router) use ($config) {
+                $controller = Arr::get($config, 'controller');
+
+                $router->get('/', ['uses' => $controller.'@index']);
+                $router->post('/', ['uses' => $controller.'@create']);
+                $router->put('/{id}', ['uses' => $controller.'@update']);
+                $router->delete('/{id}', ['uses' => $controller.'@remove']);
+                $router->get('/{id}', ['uses' => $controller.'@show']);
+            });
+        }
     }
 }
