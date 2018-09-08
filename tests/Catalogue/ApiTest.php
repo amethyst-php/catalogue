@@ -3,12 +3,12 @@
 namespace Railken\LaraOre\Tests\Catalogue;
 
 use Illuminate\Support\Facades\Config;
+use Railken\LaraOre\Api\Support\Testing\TestableTrait;
 use Railken\LaraOre\Catalogue\CatalogueFaker;
-use Railken\LaraOre\Support\Testing\ApiTestableTrait;
 
 class ApiTest extends BaseTest
 {
-    use ApiTestableTrait;
+    use TestableTrait;
 
     /**
      * Retrieve basic url.
@@ -17,7 +17,7 @@ class ApiTest extends BaseTest
      */
     public function getBaseUrl()
     {
-        return Config::get('ore.api.router.prefix').Config::get('ore.catalogue.http.admin.router.prefix');
+        return Config::get('ore.api.http.admin.router.prefix').Config::get('ore.catalogue.http.admin.router.prefix');
     }
 
     /**

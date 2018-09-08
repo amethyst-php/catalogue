@@ -1,6 +1,6 @@
 # lara-ore-catalogue
 
-[![Build Status](https://img.shields.io/travis/railken/lara-ore-catalogue/master.svg?style=flat-square)](https://travis-ci.org/railken/lara-ore-catalogue)
+[![Build Status](https://travis-ci.org/railken/lara-ore-catalogue.svg?branch=master)](https://travis-ci.org/railken/lara-ore-catalogue)
 
 This is a lara-ore package.
 
