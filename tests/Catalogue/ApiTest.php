@@ -3,28 +3,31 @@
 namespace Railken\LaraOre\Tests\Catalogue;
 
 use Illuminate\Support\Facades\Config;
-use Railken\LaraOre\Api\Support\Testing\TestableTrait;
+use Railken\LaraOre\Api\Support\Testing\TestableBaseTrait;
 use Railken\LaraOre\Catalogue\CatalogueFaker;
 
 class ApiTest extends BaseTest
 {
-    use TestableTrait;
+    use TestableBaseTrait;
 
     /**
-     * Retrieve basic url.
+     * Faker class.
      *
-     * @return string
+     * @var string
      */
-    public function getBaseUrl()
-    {
-        return Config::get('ore.api.http.admin.router.prefix').Config::get('ore.catalogue.http.admin.router.prefix');
-    }
+    protected $faker = CatalogueFaker::class;
 
     /**
-     * Test common requests.
+     * Router group resource.
+     *
+     * @var string
      */
-    public function testSuccessCommon()
-    {
-        $this->commonTest($this->getBaseUrl(), CatalogueFaker::make()->parameters());
-    }
+    protected $group = 'admin';
+
+    /**
+     * Base path config.
+     *
+     * @var string
+     */
+    protected $config = 'ore.catalogue';
 }
