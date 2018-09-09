@@ -107,7 +107,7 @@ return [
             'enabled'    => true,
             'controller' => Railken\LaraOre\Http\Controllers\Admin\CataloguesController::class,
             'router'     => [
-                'prefix' => '/admin/catalogues',
+                'prefix' => '/catalogues',
             ],
         ],
     ],
