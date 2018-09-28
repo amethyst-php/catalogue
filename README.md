@@ -1,8 +1,8 @@
-# lara-ore-catalogue
+# amethyst-catalogue
 
-[![Build Status](https://travis-ci.org/railken/lara-ore-catalogue.svg?branch=master)](https://travis-ci.org/railken/lara-ore-catalogue)
+[![Build Status](https://travis-ci.org/railken/amethyst-catalogue.svg?branch=master)](https://travis-ci.org/railken/amethyst-catalogue)
 
-This is a lara-ore package.
+[Amethyst](https://github.com/railken/amethyst) package
 
 # Requirements
 
@@ -13,7 +13,7 @@ PHP 7.1 and later.
 You can install it via [Composer](https://getcomposer.org/) by typing the following command:
 
 ```bash
-composer require railken/lara-ore-catalogue
+composer require railken/amethyst-catalogue
 ```
 
 The package will automatically register itself.

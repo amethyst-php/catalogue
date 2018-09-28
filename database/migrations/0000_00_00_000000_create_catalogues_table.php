@@ -12,14 +12,14 @@ class CreateCataloguesTable extends Migration
      */
     public function up()
     {
-        Schema::create(Config::get('ore.catalogue.table'), function (Blueprint $table) {
+        Schema::create(Config::get('amethyst.catalogue.managers.catalogue.table'), function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
             $table->text('description')->nullable();
             $table->boolean('enabled')->default(1);
             $table->text('notes')->nullable();
             $table->integer('parent_id')->unsigned()->nullable();
-            $table->foreign('parent_id')->references('id')->on(Config::get('ore.catalogue.table'));
+            $table->foreign('parent_id')->references('id')->on(Config::get('amethyst.catalogue.managers.catalogue.table'));
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,6 +30,6 @@ class CreateCataloguesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(Config::get('ore.catalogue.table'));
+        Schema::dropIfExists(Config::get('amethyst.catalogue.managers.catalogue.table'));
     }
 }
