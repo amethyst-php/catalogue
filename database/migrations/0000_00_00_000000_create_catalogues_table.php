@@ -18,8 +18,8 @@ class CreateCataloguesTable extends Migration
             $table->text('description')->nullable();
             $table->boolean('enabled')->default(1);
             $table->text('notes')->nullable();
-            $table->integer('parent_id')->unsigned()->nullable();
-            $table->foreign('parent_id')->references('id')->on(Config::get('amethyst.catalogue.managers.catalogue.table'));
+            $table->datetime('starts_at')->nullable();
+            $table->datetime('ends_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -12,6 +12,11 @@ class Catalogue extends Model implements EntityContract
 {
     use SoftDeletes;
 
+    protected $dates = [
+        'starts_at',
+        'ends_at',
+    ];
+
     /**
      * Creates a new instance of the model.
      *

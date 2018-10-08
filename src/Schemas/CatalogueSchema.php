@@ -2,7 +2,6 @@
 
 namespace Railken\Amethyst\Schemas;
 
-use Railken\Amethyst\Managers\CatalogueManager;
 use Railken\Lem\Attributes;
 use Railken\Lem\Schema;
 
@@ -23,9 +22,8 @@ class CatalogueSchema extends Schema
             Attributes\LongTextAttribute::make('description'),
             Attributes\LongTextAttribute::make('notes'),
             Attributes\BooleanAttribute::make('enabled'),
-            Attributes\BelongsToAttribute::make('parent_id')
-                ->setRelationName('parent')
-                ->setRelationManager(CatalogueManager::class),
+            Attributes\DateTimeAttribute::make('starts_at'),
+            Attributes\DateTimeAttribute::make('ends_at'),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),
