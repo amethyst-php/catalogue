@@ -20,8 +20,8 @@ class CatalogueFaker extends Faker
         $bag->set('description', $faker->text);
         $bag->set('enabled', 1);
         $bag->set('notes', $faker->text);
-        $bag->set('starts_at', new \DateTime());
-        $bag->set('ends_at', new \DateTime());
+        $bag->set('starts_at', (new \DateTime())->format('Y-m-d H:i:s'));
+        $bag->set('ends_at', (new \DateTime())->format('Y-m-d H:i:s'));
 
         return $bag;
     }
