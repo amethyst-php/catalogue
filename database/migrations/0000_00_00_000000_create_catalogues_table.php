@@ -12,7 +12,7 @@ class CreateCataloguesTable extends Migration
      */
     public function up()
     {
-        Schema::create(Config::get('amethyst.catalogue.managers.catalogue.table'), function (Blueprint $table) {
+        Schema::create(Config::get('amethyst.catalogue.data.catalogue.table'), function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
             $table->text('description')->nullable();
@@ -30,6 +30,6 @@ class CreateCataloguesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(Config::get('amethyst.catalogue.managers.catalogue.table'));
+        Schema::dropIfExists(Config::get('amethyst.catalogue.data.catalogue.table'));
     }
 }
