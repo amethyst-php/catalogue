@@ -25,9 +25,9 @@ class CatalogueTest extends BaseTest
     protected $group = 'admin';
 
     /**
-     * Base path config.
+     * Route name.
      *
      * @var string
      */
-    protected $config = 'amethyst.catalogue.http.admin.catalogue';
+    protected $route = 'admin.catalogue';
 }
