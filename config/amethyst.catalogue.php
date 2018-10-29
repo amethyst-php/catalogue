@@ -19,8 +19,8 @@ return [
             'serializer' => Railken\Amethyst\Serializers\CatalogueSerializer::class,
             'validator'  => Railken\Amethyst\Validators\CatalogueValidator::class,
             'authorizer' => Railken\Amethyst\Authorizers\CatalogueAuthorizer::class,
-            'faker'      => Railken\Amethyst\Authorizers\CatalogueFaker::class,
-            'manager'    => Railken\Amethyst\Authorizers\CatalogueManager::class,
+            'faker'      => Railken\Amethyst\Fakers\CatalogueFaker::class,
+            'manager'    => Railken\Amethyst\Managers\CatalogueManager::class,
         ],
     ],
 
