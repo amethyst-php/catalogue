@@ -35,11 +35,11 @@ return [
     'http' => [
         'admin' => [
             'catalogue' => [
-                'enabled'     => true,
-                'controller'  => Railken\Amethyst\Http\Controllers\Admin\CataloguesController::class,
-                'router'      => [
-                    'as'        => 'catalogue.',
-                    'prefix'    => '/catalogues',
+                'enabled'    => true,
+                'controller' => Railken\Amethyst\Http\Controllers\Admin\CataloguesController::class,
+                'router'     => [
+                    'as'     => 'catalogue.',
+                    'prefix' => '/catalogues',
                 ],
             ],
         ],
