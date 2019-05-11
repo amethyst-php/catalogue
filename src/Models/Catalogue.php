@@ -28,6 +28,6 @@ class Catalogue extends Model implements EntityContract
      */
     public function parent(): BelongsTo
     {
-        return $this->belongsTo(Catalogue::class);
+        return $this->belongsTo(config('amethyst.catalogue.data.catalogue.model'));
     }
 }
