@@ -10,7 +10,7 @@ return [
         ],
         'ends_at' => [
             'label' => 'Ends At',
-            'description' => 'The catalogue won't be valid anymore from this date'
+            'description' => 'The catalogue won\'t be valid anymore from this date'
         ]
     ],
     'tabs' => [
