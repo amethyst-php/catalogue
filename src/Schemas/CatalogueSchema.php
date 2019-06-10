@@ -21,7 +21,11 @@ class CatalogueSchema extends Schema
                 ->setUnique(true),
             Attributes\LongTextAttribute::make('description'),
             Attributes\LongTextAttribute::make('notes'),
-            Attributes\BooleanAttribute::make('enabled'),
+            Attributes\EnumAttribute::make('status', [
+                'draft',
+                'active',
+                'closed'
+            ]),
             Attributes\DateTimeAttribute::make('starts_at'),
             Attributes\DateTimeAttribute::make('ends_at'),
             Attributes\CreatedAtAttribute::make(),
