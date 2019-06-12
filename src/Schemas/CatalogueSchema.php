@@ -24,7 +24,7 @@ class CatalogueSchema extends Schema
             Attributes\EnumAttribute::make('status', [
                 'draft',
                 'active',
-                'closed'
+                'closed',
             ]),
             Attributes\DateTimeAttribute::make('starts_at'),
             Attributes\DateTimeAttribute::make('ends_at'),
