@@ -13,14 +13,14 @@ return [
         'catalogue' => [
             'table'      => 'amethyst_catalogues',
             'comment'    => 'Catalogue',
-            'model'      => Railken\Amethyst\Models\Catalogue::class,
-            'schema'     => Railken\Amethyst\Schemas\CatalogueSchema::class,
-            'repository' => Railken\Amethyst\Repositories\CatalogueRepository::class,
-            'serializer' => Railken\Amethyst\Serializers\CatalogueSerializer::class,
-            'validator'  => Railken\Amethyst\Validators\CatalogueValidator::class,
-            'authorizer' => Railken\Amethyst\Authorizers\CatalogueAuthorizer::class,
-            'faker'      => Railken\Amethyst\Fakers\CatalogueFaker::class,
-            'manager'    => Railken\Amethyst\Managers\CatalogueManager::class,
+            'model'      => Amethyst\Models\Catalogue::class,
+            'schema'     => Amethyst\Schemas\CatalogueSchema::class,
+            'repository' => Amethyst\Repositories\CatalogueRepository::class,
+            'serializer' => Amethyst\Serializers\CatalogueSerializer::class,
+            'validator'  => Amethyst\Validators\CatalogueValidator::class,
+            'authorizer' => Amethyst\Authorizers\CatalogueAuthorizer::class,
+            'faker'      => Amethyst\Fakers\CatalogueFaker::class,
+            'manager'    => Amethyst\Managers\CatalogueManager::class,
         ],
     ],
 
@@ -36,7 +36,7 @@ return [
         'admin' => [
             'catalogue' => [
                 'enabled'    => true,
-                'controller' => Railken\Amethyst\Http\Controllers\Admin\CataloguesController::class,
+                'controller' => Amethyst\Http\Controllers\Admin\CataloguesController::class,
                 'router'     => [
                     'as'     => 'catalogue.',
                     'prefix' => '/catalogues',
