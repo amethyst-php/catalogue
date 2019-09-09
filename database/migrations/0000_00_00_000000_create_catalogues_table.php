@@ -14,7 +14,7 @@ class CreateCataloguesTable extends Migration
     {
         Schema::create(Config::get('amethyst.catalogue.data.catalogue.table'), function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();
+            $table->string('name')->index();
             $table->text('description')->nullable();
             $table->string('status')->default('draft');
             $table->text('notes')->nullable();
