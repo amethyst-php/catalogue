@@ -1,6 +1,6 @@
 # amethyst-catalogue
 
-[![Build Status](https://travis-ci.org/amethyst-php/catalogue.svg?branch=master)](https://travis-ci.org/amethyst-php/catalogue)
+[![Action Status](https://github.com/amethyst-php/catalogue/workflows/test/badge.svg)](https://github.com/amethyst-php/catalogue/actions)
 
 [Amethyst](https://github.com/amethyst-php/amethyst) package
 
